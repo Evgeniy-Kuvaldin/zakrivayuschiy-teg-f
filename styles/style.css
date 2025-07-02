@@ -4,13 +4,71 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
 
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-inline-size: 320px;
+  inline-size: 100dvw;
   min-block-size: 100dvb;
+  font-family: var(--main-font, Arial, sans-serif);
+  background-image: var(--background-gradient);
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--accent-font, Arial, sans-serif);
+  text-transform: uppercase;
+  background-color: var(--article-background, #fff);
+  border: var(--border);
+  inline-size: var(--content-width);
+  block-size: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
+}
+
+.title {
+  font-size: var(--title-font-size);
+}
+
+.subtitle {
+  font-size: var(--subtitle-font-size);
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 100px auto 50px;
+}
+
+.article-list-item {
+  display: flex;
+  inline-size: var(--content-width);
+  border: var(--border);
+  background-color: var(--article-background);
+}
+
+.article-title {
+  font-weight: var(--article-title-weight, 700);
+}
+
+.article-image {
+  display: block;
+  inline-size: 100%;
+  position: relative;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.article-content {
+  font-weight: var(--article-content-weight, 400);
 }
