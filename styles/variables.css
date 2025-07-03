@@ -3,10 +3,12 @@
   --main-font: 'Inter-Variable';
   --accent-font: 'PressStart2P';
   --text-color: #000;
-  --text-stroke-color: #fff;
+  --text-stroke: 1px #fff;
   --text-size: 18px;
   --article-title-weight: 700;
+  --article-title-size: 18px;
   --article-content-weight: 400;
+  --article-content-size: 18px;
   --background-gradient: repeating-linear-gradient(90deg, #d3d3d3,  transparent 4px), 
   repeating-linear-gradient(180deg, #d3d3d3,  transparent 4px), 
   linear-gradient(180deg, #e7e7e7 0% 0.01%, #1a1a1a 100%);
