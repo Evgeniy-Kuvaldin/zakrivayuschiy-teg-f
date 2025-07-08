@@ -169,9 +169,10 @@
   inline-size: 21px;
 }
 
-.save-dialog {
+.save-dialog[open] {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 30px;
   border: var(--border, 2px solid #000);
   padding: 30px;
@@ -223,4 +224,13 @@
     -webkit-text-stroke: var(--text-stroke, 1px #fff);
     text-stroke: var(--text-stroke, 1px #fff);
   }
+}
+
+@media (width<=375px) {
+  header,
+  .main__article-list-item {
+    inline-size: 100dvw;
+  }
+
+
 }
