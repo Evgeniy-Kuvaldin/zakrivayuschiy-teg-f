@@ -94,6 +94,7 @@
     0 1px #fff,
     1px 0 #fff,
     0 -1px #fff;
+    mix-blend-mode: hard-light;
 }
 
 .article-content {
@@ -129,6 +130,12 @@
   display: block;
   inline-size: 27px;
   block-size: 24px;
+}
+ /*Скрываем заполнение иконки лайка*/
+.heart-fill,
+.inner,
+.outer-dots {
+  fill: transparent;
 }
 
 .card__like-button {
