@@ -226,6 +226,39 @@
   fill: transparent;
 }
 
+/*Фильтры для изображений*/
+.brightness /*Первая*/{
+  filter: brightness(150%);
+}
+
+.grayscale /**/{
+  filter: grayscale(75%);
+}
+
+.hue-rotate /**/{
+  filter: hue-rotate(0.5turn);
+}
+
+.invert /**/{
+  filter: invert(100%);
+}
+
+.sepia /**/{
+  filter: sepia(0.6);
+}
+
+.blur /**/{
+  filter: blur(3px);
+}
+
+.saturate /**/{
+  filter: saturate(390%);
+}
+
+.mixed /**/{
+  filter: contrast(250%), hue-rotate(0.35turn), saturate(120%);
+}
+
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .article-image__overlay-text {
     text-shadow: none;
