@@ -66,12 +66,12 @@
 .article-image-box {
   position: relative;
   block-size: var(--content-width);
+  border-top: var(--border, 2px solid #000);
+  border-bottom: var(--border, 2px solid #000);
 }
 
 .article-image {
   display: block;
-  border-top: var(--border, 2px solid #000);
-  border-bottom: var(--border, 2px solid #000);
   object-fit: cover;
   object-position: right;
   inline-size: 100%;
@@ -95,6 +95,7 @@
     1px 0 #fff,
     0 -1px #fff;
   mix-blend-mode: hard-light;
+  text-transform: uppercase;
 }
 
 .article-content {
@@ -231,32 +232,32 @@
   filter: brightness(150%);
 }
 
-.grayscale /**/{
+.grayscale /*Вторая*/{
   filter: grayscale(75%);
 }
 
-.hue-rotate /**/{
+.hue-rotate /*Четвертая*/{
   filter: hue-rotate(0.5turn);
 }
 
-.invert /**/{
+.invert /*Шестая*/{
   filter: invert(100%);
 }
 
-.sepia /**/{
-  filter: sepia(0.6);
+.sepia /*Третья*/{
+  filter: sepia(0.8);
 }
 
-.blur /**/{
+.blur /*Седьмая*/{
   filter: blur(3px);
 }
 
-.saturate /**/{
+.saturate /*Пятая*/{
   filter: saturate(390%);
 }
 
-.mixed /**/{
-  filter: contrast(250%), hue-rotate(0.35turn), saturate(120%);
+.mixed /*Восьмая*/{
+  filter: contrast(250%) hue-rotate(0.35turn) saturate(80%);
 }
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
