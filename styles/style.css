@@ -65,9 +65,9 @@
 
 .article-image-box {
   position: relative;
-  block-size: var(--content-width);
   border-top: var(--border, 2px solid #000);
   border-bottom: var(--border, 2px solid #000);
+  block-size: var(--content-width);
 }
 
 .article-image {
@@ -89,13 +89,13 @@
   font-family: var(--accent-font, Arial, sans-serif);
   font-weight: var(--article-content-weight, 400);
   font-size: 14px;
+  text-transform: uppercase;
   text-shadow: 
     -1px 0 #fff, 
     0 1px #fff,
     1px 0 #fff,
     0 -1px #fff;
   mix-blend-mode: hard-light;
-  text-transform: uppercase;
 }
 
 .article-content {
@@ -149,11 +149,11 @@
   position: relative;
   z-index: 3;
   display: block;
+  color: var(--text-button-color, #fff);
   font-family: var(--accent-font, Arial, sans-serif);
   font-weight: var(--article-content-weight, 400);
   font-size: 14px;
   line-height: 0.9;
-  color: var(--text-button-color, #fff);
   mix-blend-mode: difference;
 }
 
@@ -172,14 +172,21 @@
 }
 
 .footer__save-button__floppy-icon {
+  position: relative;
+  z-index: 3;
+  display: block;
   inline-size: 21px;
   block-size: 21px;
+  mix-blend-mode: difference;
+  filter: invert(1); /*Обратный разворот цвета. Не работает через color и stroke т.к. иконка состоит из точек и ИХ обводки.*/
 }
+
 /*Эффекты кнопок, кроме сердца*/
 .button-main {
   position: relative;
   z-index: 0;
   overflow: hidden;
+  background-color: #fff;
   transition: box-shadow 0.3s ease;
 }
 
@@ -188,11 +195,11 @@
   position: absolute;
   z-index: 1;
   display: block;
-  block-size: 100%;
-  inline-size: 100%;
-  transform: translateX(-100%);
   background-color: var(--text-color, #000);
   transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+  block-size: 100%;
+  inline-size: 100%;
 }
 
 .button-main:focus {
@@ -201,8 +208,8 @@
 }
 
 .button-main:hover.button-main::after {
-  transform: translateX(0%);
   transition: transform 0.5s ease-in-out;
+  transform: translateX(0%);
 }
 
 /*Настройки диалога*/
