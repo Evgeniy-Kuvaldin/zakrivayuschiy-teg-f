@@ -39,21 +39,20 @@ input {
 
 button:focus,
 button:focus-visible {
-  outline: none;
   box-shadow: none;
+  outline: none;
 }
 
 ul,
 ol {
   list-style: none;
 }
-s
-.visually-hidden {
+s .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }

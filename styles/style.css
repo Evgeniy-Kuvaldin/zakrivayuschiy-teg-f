@@ -122,16 +122,16 @@
 
 .card__icon-button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border: none;
+  outline: 1px solid transparent;  /*Для плавного исчезновения*/
+  outline-offset: -2px;
   background-color: transparent;
+  transition: outline 0.3s ease;
   cursor: pointer;
   inline-size: 38px;
   block-size: 38px;
-  outline: 1px solid transparent;  /*Для плавного исчезновения*/
-  outline-offset: -2px;
-  transition: outline 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -192,10 +192,10 @@
   position: relative;
   z-index: 3;
   display: block;
+  filter: invert(1); /*Обратный разворот цвета. Не работает через color и stroke т.к. иконка состоит из точек и ИХ обводки.*/
   inline-size: 21px;
   block-size: 21px;
   mix-blend-mode: difference;
-  filter: invert(1); /*Обратный разворот цвета. Не работает через color и stroke т.к. иконка состоит из точек и ИХ обводки.*/
 }
 
 /*Эффекты кнопок, кроме сердца*/
@@ -237,9 +237,9 @@
   gap: 30px;
   border: var(--border, 2px solid #000);
   padding: 30px;
+  overflow: hidden;
   inline-size: 353px;
   block-size: 191px;
-  overflow: hidden;
 }
 
 .save-dialog::backdrop {
