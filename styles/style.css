@@ -239,6 +239,7 @@
   padding: 30px;
   inline-size: 353px;
   block-size: 191px;
+  overflow: hidden;
 }
 
 .save-dialog::backdrop {
@@ -250,14 +251,17 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 12px;
   align-self: start;
+  inline-size: 100%;
 }
 
 .save-dialog__content__floppy-icon {
   display: block;
-  inline-size: 39px;
-  block-size: 39px;
+  min-inline-size: 39px;
+  max-inline-size: 39px;
+  min-block-size: 39px;
+  max-block-size: 39px;
 }
 
 .save-dialog__content__text {
@@ -266,6 +270,8 @@
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
+  max-inline-size: 234px;
+  max-block-size: 63px;
 }
 
 .save-dialog__dialog-button {
@@ -279,11 +285,62 @@
   block-size: 38px;
 }
 
- /*Скрываем заполнение иконки лайка*/
-.heart-fill,
-.heart-inner,
-.heart-outer-dots {
-  fill: transparent;
+/*Работа с иконкой лайка*/
+.heart-outer-dots {  /*Точки вокруг иконки*/
+  opacity: 0;
+}
+
+.heart-outline {  /*Контур иконки*/
+  transition: fill var(--heart-contour-transition) linear var(--heart-contour-delay);
+}
+
+.heart-inner {  /*Центр иконки*/
+  transition: fill var(--heart-inner-transition) linear var(--heart-inner-delay);
+}
+
+.heart-fill {  /*Основной объем иконки*/
+  transition: fill var(--heart-fill-transition) linear var(--heart-fill-delay);
+}
+
+.heart {
+  transform-origin: center;
+}
+
+/*Наведение на иконку*/
+.like-icon:hover {
+  --heart-inner: #000;
+  --heart-fill: #000;
+
+  --heart-inner-delay: 0s;
+  --heart-fill-delay: 0.05s;
+}
+
+.like-icon:active {
+  --heart-inner: #FF0000;
+  --heart-fill: #FF0000;
+
+  --heart-inner-delay: 0s;
+  --heart-fill-delay: 0.05s;
+}
+
+.like-icon.is-liked {
+  --heart-contour: #FF0000;
+  --heart-inner: #FF0000;
+  --heart-fill: #FF0000;
+
+  --heart-contour-transition: 0.3s;
+
+  --heart-contour-delay: 0.06s;
+  --heart-inner-delay: 0s;
+  --heart-fill-delay: 0.05s;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in;
+}
+
+.like-icon.is-liked .heart-outer-dots {
+  animation: dots-flash 0.3s ease-in 0.3s;
 }
 
 /*Фильтры для изображений*/
@@ -331,5 +388,17 @@
   header,
   .main__article-list-item {
     inline-size: 100dvw;
+    min-inline-size: 320px;
+  }
+
+  .save-button {
+    flex-direction: column;
+    inline-size: 306px;
+    block-size: 84px;
+  }
+
+  .footer__save-button__floppy-icon {
+    min-inline-size: 28px;
+    min-block-size: 28px;
   }
 }
