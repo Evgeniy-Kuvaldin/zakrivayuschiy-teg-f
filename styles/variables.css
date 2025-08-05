@@ -10,18 +10,20 @@
 
   --text-size: 18px;
 
-  --article-title-weight: 700;
+  --article-title-weight: 715;
   --article-title-size: 18px;
-  --article-content-weight: 400;
+  --article-content-weight: 410;
   --article-content-size: 18px;
 
-  --background-gradient: repeating-linear-gradient(90deg, #d3d3d3,  transparent 4px), 
-  repeating-linear-gradient(180deg, #d3d3d3,  transparent 4px), 
-  linear-gradient(180deg, #e7e7e7 0% 0.01%, #1a1a1a 100%);
+  --header-padding: clamp(7.625rem, 7.449rem + 0.751vw, 8.125rem);
+
+  --background-gradient: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), 
+  repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), 
+  linear-gradient(to bottom, #e7e7e7 0% 0.01%, #1a1a1a 100%);
   --article-background: #fff;
 
-  --title-font-size: clamp(3.063rem, 2.622rem + 1.878vw, 4.313rem);
-  --subtitle-font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  --title-font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  --subtitle-font-size: clamp(0.938rem, 0.761rem + 0.751vw, 1.438rem);
   --content-width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   
   --border: 2px solid #000;

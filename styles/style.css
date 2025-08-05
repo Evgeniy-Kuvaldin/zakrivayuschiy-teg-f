@@ -17,9 +17,10 @@
   font-family: var(--main-font, Arial, sans-serif);
   background-image: var(--background-gradient);
   background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   max-inline-size: 100dvw;
-  min-block-size: 100dvb;
+  min-block-size: 100dvh;
 }
 
 .header {
@@ -27,12 +28,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: var(--border);
+  gap: 20px;
+  outline: var(--border);
+  padding: var(--header-padding) 0;
   font-family: var(--accent-font, Arial, sans-serif);
   text-transform: uppercase;
   background-color: var(--article-background, #fff);
   inline-size: var(--content-width);
-  block-size: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
 }
 
 .header__title {
@@ -47,7 +49,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin: 100px auto 50px;
+  margin: 98px auto 50px;
 }
 
 .main__article-list-item {
@@ -59,7 +61,7 @@
 
 .article-title {
   padding: 5px 10px;
-  font-weight: var(--article-title-weight, 700);
+  font-variation-settings: 'wght' var(--article-title-weight,715);
   font-size: var(--article-title-size, 18px);
 }
 
@@ -87,7 +89,6 @@
   opacity: 0.5;
   color: var(--text-color, #000);
   font-family: var(--accent-font, Arial, sans-serif);
-  font-weight: var(--article-content-weight, 400);
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: 
@@ -107,7 +108,7 @@
 
 .article-content__text {
   display: block;
-  font-weight: var(--article-content-weight, 400);
+  font-variation-settings: 'wght' var(--article-content-weight, 415);
   font-size: var(--article-content-size, 18px);
 }
 
@@ -117,7 +118,7 @@
   justify-self: end;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+  gap: 7px;
 }
 
 .card__icon-button {
@@ -132,6 +133,7 @@
   cursor: pointer;
   inline-size: 38px;
   block-size: 38px;
+  padding: 0;
 }
 
 .card__icon-button:focus {
@@ -141,13 +143,11 @@
 
 .card__icon-button:focus-visible {
   outline: var(--border, 2px solid #000);
-  transition: outline 0.3s ease;
 }
 
 .like-icon {
-  display: block;
-  inline-size: 27px;
-  block-size: 24px;
+  display: inline-block;
+
 }
 
 .card__like-button {
@@ -158,7 +158,7 @@
   align-self: self-end;
   border: var(--border, 2px solid #000);
   cursor: pointer;
-  inline-size: 138px;
+  inline-size: 130px;
   block-size: 38px;
 }
 
@@ -178,6 +178,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  justify-self: center;
   align-items: center;
   gap: 8px;
   margin-top: 50px;
@@ -188,7 +189,7 @@
   block-size: 55px;
 }
 
-.footer__save-button__floppy-icon {
+.save-button__floppy-icon {
   position: relative;
   z-index: 3;
   display: block;
@@ -237,9 +238,7 @@
   gap: 30px;
   border: var(--border, 2px solid #000);
   padding: 30px;
-  overflow: hidden;
   inline-size: 353px;
-  block-size: 191px;
 }
 
 .save-dialog::backdrop {
@@ -249,7 +248,7 @@
 .save-dialog__content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 12px;
   align-self: start;
@@ -257,10 +256,9 @@
 }
 
 .save-dialog__content__floppy-icon {
-  display: block;
-  min-inline-size: 39px;
+  display: inline-block;
+  stroke: transparent;
   max-inline-size: 39px;
-  min-block-size: 39px;
   max-block-size: 39px;
 }
 
@@ -271,7 +269,6 @@
   line-height: 1.5;
   text-transform: uppercase;
   max-inline-size: 234px;
-  max-block-size: 63px;
 }
 
 .save-dialog__dialog-button {
@@ -397,7 +394,7 @@
     block-size: 84px;
   }
 
-  .footer__save-button__floppy-icon {
+  .save-button__floppy-icon {
     min-inline-size: 28px;
     min-block-size: 28px;
   }
