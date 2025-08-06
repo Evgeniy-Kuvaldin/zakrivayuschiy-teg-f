@@ -64,6 +64,7 @@
 .article-title {
   padding: 5px 10px;
   font-variation-settings: 'wght' var(--article-title-weight,715);
+  font-size: var(--text-size, 18px);  /*Явно задаем, чтобы не перебивалось свойством для h3 (1.17em)*/
 }
 
 .article-image-box {
