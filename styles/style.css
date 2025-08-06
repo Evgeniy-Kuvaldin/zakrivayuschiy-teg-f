@@ -333,35 +333,35 @@
 }
 
 /*Фильтры для изображений*/
-.brightness /*Первая*/{
+.brightness /*Первая*/ {
   filter: brightness(150%);
 }
 
-.grayscale /*Вторая*/{
+.grayscale /*Вторая*/ {
   filter: grayscale(75%);
 }
 
-.hue-rotate /*Четвертая*/{
+.hue-rotate /*Четвертая*/ {
   filter: hue-rotate(0.5turn);
 }
 
-.invert /*Шестая*/{
+.invert /*Шестая*/ {
   filter: invert(100%);
 }
 
-.sepia /*Третья*/{
+.sepia /*Третья*/ {
   filter: sepia(0.8);
 }
 
-.blur /*Седьмая*/{
+.blur /*Седьмая*/ {
   filter: blur(3px);
 }
 
-.saturate /*Пятая*/{
+.saturate /*Пятая*/ {
   filter: saturate(390%);
 }
 
-.mixed /*Восьмая*/{
+.mixed /*Восьмая*/ {
   filter: contrast(250%) hue-rotate(0.35turn) saturate(80%);
 }
 

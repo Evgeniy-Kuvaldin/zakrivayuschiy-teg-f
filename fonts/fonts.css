@@ -13,9 +13,9 @@
   font-family: 'Inter-Variable';
   font-display: swap;
   src: 
-    local('Inter-Variable'),
+    local('Inter-Variable') format('woff2 supports variation'),
     url('./Inter-Variable.woff2') format('woff2 supports variation'),
       url('./Inter-Variable.woff2') format('woff2-variations');
     font-style: normal;
-    font-weight: 410 715;
+    font-weight: 400 785;
 }
